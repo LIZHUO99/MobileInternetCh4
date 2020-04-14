@@ -1,8 +1,21 @@
 # Chapter-4
 第四讲 复杂应用组件 Handler机制、多线程、 自定义View
 
-包含了以下内容
+完成了clock组件：
 
-1. ppt - 本地课程的讲义
-2. assignment - 本次课程的作业：绘制一个桌面时钟，在Clock.java类中完成todo部分
+```java
+// 每一秒刷新一次，让指针动起来
+postInvalidateDelayed(1000);
+```
 
+```java
+// 画分针
+drawPointer(canvas, 1, nowMinutes);
+```
+
+```java
+// 画分针，设置分针的颜色
+degree = value * UNIT_DEGREE;
+mNeedlePaint.setColor(Color.BLUE);
+pointerHeadXY = getPointerHeadXY(MINUTE_POINTER_LENGTH, degree);
+```
